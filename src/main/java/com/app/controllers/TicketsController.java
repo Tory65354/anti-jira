@@ -1,7 +1,7 @@
 package com.app.controllers;
 
 import com.app.model.Ticket;
-import com.app.security.ProjectServices;
+import com.app.services.ProjectServices;
 import com.app.services.TicketServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,7 +30,10 @@ public class TicketsController {
     public String storeNewTicket(@ModelAttribute Ticket ticket) {
         ticketServices.storeNewTicket(ticket);
         return  "redirect:/new-ticket";
+    }
 
-
+    @GetMapping("/ticket")
+    public String showTicket() {
+        return "ticket";
     }
 }

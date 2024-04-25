@@ -1,4 +1,4 @@
-package com.app.security;
+package com.app.services;
 
 import com.app.dao.ProjectDAO;
 import com.app.model.Project;

@@ -1,8 +1,7 @@
 package com.app.controllers;
 
-import com.app.dao.ProjectDAO;
 import com.app.model.Project;
-import com.app.security.ProjectServices;
+import com.app.services.ProjectServices;
 import com.app.services.TicketServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
