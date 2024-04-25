@@ -9,10 +9,18 @@
   <script src="/js/main.js" defer></script>
 </head>
 <body>
-  <div onclick="getUsers();">SHOW ALL USERS</div>
-<div id="user-list"></div>
+  <div>Summary: </div>
+  <div th:text="${ticket.summary}"></div>
+  <div> Description: </div>
+  <div th:text="${ticket.description}"></div>
+  <div>Assignee: </div>
+  <div th:text="${ticket.user.firstName + ' ' + ticket.user.lastName}"></div>
+  <a th:href="'/ticket/edit/' + ${ticket.id}">Edit</a>
 
-<input type="text" id="assignee" placeholder="Start typing.......">
+  <div onclick="getUsers();">SHOW ALL USERS</div>
+  <div id="user-list"></div>
+
+  <input type="text" id="assignee" placeholder="Start typing.......">
 
 </body>
 </html>
